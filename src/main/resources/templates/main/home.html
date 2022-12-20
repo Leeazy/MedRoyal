@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>Главная страница</title>
+    <div th:insert="blocks/webjars :: webjars"></div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<style>
+    .nav-link:hover {
+        background: none !important;
+    }
+    a:hover {
+        text-decoration: none !important;
+    }
+</style>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <header th:replace="blocks/header :: header"></header>
+        <!--Приветствие-->
+        <div>
+            <div class="d-flex justify-content-center" style= "margin: 7em 0 0">
+                <div class="themes col-4" style="margin-right: 5em">
+                    <h1>MedRoyal</h1>
+                    <div class="mt-5 ">Холдинг «MedRoyal» — это сеть современных многопрофильных медицинских центров с собственным хирургическим центром и комфортным круглосуточным стационаром. <br><br>
+                        Более 15 лет мы проводим диагностику и лечение взрослых и детей по большинству направлений медицины в 27 многопрофильных клиниках в Москве, Подмосковье, Санкт-Петербурге и Рязани.<br><br><br>
+                        С нами вы можете быть уверены, <span class="spanStyle" style="font-weight: 100;">вам помогут!</span>
+                    </div>
+                </div>
+                <img th:src="@{/applicationFiles/designElements/building.png}" style="width: 700px;" alt="">
+            </div>
+            <div>
+                <img class="triangleMain1" th:src="@{/applicationFiles/designElements/mainTriangle1.svg}" alt="">
+                <img class="triangleMain2" th:src="@{/applicationFiles/designElements/mainTriangle2.svg}" alt="">
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- Разделитель -->
+        <div class="mt-5 mb-4 d-flex justify-content-center">
+            <div class="container mt-5">
+                <ol class="carousel-indicators carouselIndicatorsAdvertising mt-4"></ol>
+            </div>
+        </div>
+
+        <!--О клинике-->
+        <div class="d-" style="margin-top: 65px">
+            <div class="text-center">
+                <h1>О нас</h1>
+                <h3 class="spanStyle">C 2007 года</h3>
+            </div>
+            <div class="d-flex " style="margin-top: 20px">
+                <img th:src="@{/applicationFiles/designElements/mainTriangleAboutClinic.svg}" alt="" style="margin-right: 8.8em">
+                <div class="col-2">
+                    <div class="aboutClinicBlock text-center themes">
+                        <p>Успешно работаем на протяжении </p>
+                        <p class="spanStyle mt-5 aboutClinicFont">15 лет</p>
+                    </div>
+                    <div class="aboutClinicBlock text-center themes">
+                        <p>Вошли в список лучших клиник в Москве</p>
+                        <p class="spanStyle mt-4 aboutClinicFont">В 2022 г.</p>
+                    </div>
+                </div>
+                <div class="col-2" style="margin:0 90px 0">
+                    <div class="aboutClinicBlock text-center themes">
+                        <p>С нами выздоровели более</p>
+                        <p class="spanStyle mt-5 aboutClinicFont">50 тыс. людей</p>
+                    </div>
+                    <div class="aboutClinicBlock text-center themes">
+                        <p>Обладаем самым передовым</p>
+                        <p class="spanStyle mt-5 aboutClinicFont">оборудованием</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="aboutClinicBlock themes">
+                        <p>Лидируем в области изучения и лечения </p>
+                        <p class="spanStyle mt-4" style="font-weight: 500;">Аллергических</br></br>
+                            Сердечно-</br>сосудистых</br></br>
+                            Неврологических</br></br>
+                            Инфекционных</br></br>
+                            Заболеваний</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Наши специалисты-->
+        <h2 class="text-center mt-5">Наши специалисты</h2>
+        <div class="mt-5 d-flex">
+            <a href="/medroyal/doctors" style="; text-decoration: none">
+                <div class="mainClickers row" style="--bs-gutter-x: 0; margin-left: 20.7em; margin-right: 7.2em">
+                    <div class="col-7 me-5">
+                        <img th:src="@{/applicationFiles/designElements/allDoctorsPagePhoto.jpg}" width="800" alt="">
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center whiteClicker">
+                        <h3 style="margin-top: -38px; font-size: 28px">Выбрать специалиста</h3>
+                    </div>
+                </div>
+
+            </a>
+            <img class="" th:src="@{/applicationFiles/designElements/mainTriangleDoctors.svg}" alt="">
+        </div>
+
+        <!--Наши Услуги-->
+        <h2 class="text-center mt-5">Наши услуги</h2>
+        <div class="mt-5 d-flex">
+            <img th:src="@{/applicationFiles/designElements/mainTriangleAboutClinic.svg}" alt="">
+            <a href="/medroyal/services" style="; text-decoration: none">
+                <div class="mainClickers row" style="--bs-gutter-x: 0; margin-left: 7.2em">
+                    <div class="col-7 me-5">
+                        <img th:src="@{/applicationFiles/designElements/onAppointment.jpg}" width="700" alt="">
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center whiteClicker">
+                        <h3 style="font-size: 28px; margin-top: -200px;">Заказать услугу</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!--Свяжитесь с нами-->
+        <div class="d-flex align-items-center justify-content-center" style="margin-top: 5em; height: 500px">
+            <div class="callUsCover row">
+                <div class="col-2"></div>
+                <div class="col-6 headlines">
+                    <h2 class="spanStyle mb-5">Еще остались вопросы?</h2>
+                    <p>Свяжитесь с нами и мы с радостью вам поможем!</p>
+                    <p class="mt-5">Наш телефон</p>
+                    <h1 class="spanStyle">+7 (495) 223-05-23</h1>
+                    <div class="" style="margin-top: 40px">Ждём вас в MedRoyal!</div>
+                </div>
+                <div class="col-2">
+                    <img th:src="@{/applicationFiles/designElements/callUsImage.png}" style="height: 305px;" alt="">
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+
+    </div>
+    <footer th:insert="blocks/footer :: footer"></footer>
+</div>
+</body>
+</html>

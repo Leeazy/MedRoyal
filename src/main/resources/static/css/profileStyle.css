@@ -1,0 +1,74 @@
+/*Разделение Колонок*/
+.leftC{
+    text-align: center;
+    position: center;
+    height: 100%;
+}
+.rightC{
+    margin-right: 100px;
+    text-align: center;
+}
+/*Profile photo attributes*/
+.photoFrame{
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin: 15px auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.mainPhotoInput{
+    background: transparent;
+    /*position: absolute;*/
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+.iconInput{
+    color: black;
+    background: rgb(221, 221, 221);
+
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.iconInput:hover{
+    opacity: 1;
+}
+.squareInput {
+    -webkit-transition: none;
+    transition: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: inline;
+    margin: 0 10px 0;
+    background: #DADADA;
+    border-radius: 10px;
+}
+/*Style*/
+.greenLine{
+    margin-top: 1rem;
+    width: 0.2rem;
+    height: 100%;
+    margin-right: 10rem;
+    margin-left: 2rem;
+    /*top: 8.625rem;*/
+
+    background: #5A7861;
+}
